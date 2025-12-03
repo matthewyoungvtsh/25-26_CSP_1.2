@@ -4,18 +4,14 @@
 import turtle as trtl
 painter = trtl.Turtle()
 
-def drawSquare():
+def drawSquare(length):
     for sides in range(4):
-        painter.forward(30)
+        painter.forward(length)
         painter.right(90)
 
-drawSquare()
+drawSquare(62)
 painter.forward(40)
-drawSquare()
-
-for squares in range(5):
-    drawSquare()
-    painter.forward(60)
+drawSquare(41)
 
 wn = trtl.Screen()
 wn.mainloop()
