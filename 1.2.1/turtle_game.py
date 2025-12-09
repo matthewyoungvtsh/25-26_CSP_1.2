@@ -21,8 +21,10 @@ box_turtle.speed(0)
 painter = trtl.Turtle()
 painter.shape("circle")
 painter.color(spot_color)
-painter.shapesize(2)
+painter.shapesize(painter_size())
 painter.penup()
+gamestart = trtl.Turtle()
+painter.hideturtle()
 
 countdown = trtl.Turtle()
 countdown.hideturtle()
@@ -34,9 +36,13 @@ countdown_box.hideturtle()
 #-----game functions--------
 #get a score boost, move the turtle randomly
 def spot_clicked(x, y):
-    change_position()
     update_score()
-    countdown_function()
+    global timer_up
+    if timer_up == False:
+        change_position()
+    else:
+        painter.hideturtle()
+
 
 def change_position():
     painter.teleport(rand.randint(-360, 300), rand.randint(-360, 332))
@@ -67,6 +73,7 @@ def score_box():
     score_writer.penup()
     score_writer.goto(300, 350)
 
+#box for the countdown
 def box_countdown():
     countdown_box.teleport(-357, 355)
     for sides in range(2):
@@ -75,6 +82,7 @@ def box_countdown():
         countdown_box.forward(25)
         countdown_box.left(90)
 
+#start countdown and update it for each frame
 def countdown_function():
     countdown.teleport(-350, 350)
     global timer, timer_up
@@ -87,17 +95,29 @@ def countdown_function():
         timer -= 1
         countdown.getscreen().ontimer(countdown_function, counter_interval)
 
+def start_game():
+    gamestart.teleport(0, 150)
+    gamestart.write("Start Game!", font=font_setup)
+    gamestart.onclick(countdown_function())
+    gamestart.onclick(painter.showturtle())
+
+def painter_size():
+    rand.choice(.5, 4)
 
 #hide the turtles
 score_writer.hideturtle()
 box_turtle.hideturtle()
 
 #-----events----------------
+start_game()
+
 painter.onclick(spot_clicked)
 
 score_box()
 
 box_countdown()
+
+
 
 #set up the screen
 wn = trtl.Screen()
