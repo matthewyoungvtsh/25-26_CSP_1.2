@@ -14,10 +14,10 @@ global score
 score = 0
 
 # circular turtle will not use a global variable
-spot = trtl.Turtle()
-spot.goto(-100, 0)
-spot.shape("circle")
-spot.shapesize(3)
+painter = trtl.Turtle()
+painter.goto(-100, 0)
+painter.shape("circle")
+painter.shapesize(3)
 
 # square shaped turtle will use a global variable
 box = trtl.Turtle()
@@ -39,7 +39,7 @@ def update_score_for_box(x,y):
   print(score)
 
 #---------events----------
-spot.onclick(update_score_for_spot)
+painter.onclick(update_score_for_spot)
 box.onclick(update_score_for_box)
 wn = trtl.Screen()
 wn.mainloop()
