@@ -7,7 +7,7 @@ def combine_numbers(num1, num2, num3):
     sum2 = (num1 + num2) * num3
     return sum2
 
-num1 = 1
+num1 = 2
 num2 = 2
 num3 = 4
 print(combine_numbers(num1, num2, num3))
