@@ -5,7 +5,14 @@ import turtle as trtl
 apple_image = "apple.gif" # Store the file name of your shape
 
 letter = ""
-current_letter = ""
+current_letter = "a"
+
+screen_width = 400 #width of screen
+screen_height = 400 #height of screen
+ground_height = -200
+
+apple_letter_x_offset = -25
+apple_letter_y_offset = -50
 
 wn = trtl.Screen()
 wn.bgpic("background.gif")
@@ -27,12 +34,17 @@ alphabet_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 def reset_apple(active_apple):
     # generate random letter and pop that index. the letter popped becomes the letter on the apple
+    #get global variable
     global current_letter
+    #how many letters are left
     length_of_list = len(alphabet_list)
-    if length_of_list != 0):
+    if length_of_list != 0:
         index = rand.randint(0, length_of_list)
+        #set the random letter to our current letter
         current_letter = alphabet_list.pop(index)
-        active_apple.goto()
+        #Goto: x and y -> randomize each
+        #active_apple.goto(rand.randint(-(int(screen_width))/2, (int(screen_width))/2), rand.randint(-(int(screen_height))/2, (int(screen_height))/2))
+        active_apple.goto(200, 200)
         draw_apple(active_apple, current_letter)
 
 
@@ -40,8 +52,8 @@ def reset_apple(active_apple):
 # given a turtle, set that turtle to be shaped by the image file
 def draw_apple(active_apple, current_letter):
   active_apple.shape(apple_image)
+  active_apple.showturtle()
   draw_letter(current_letter, active_apple)
-  wn.tracer(True)
   wn.update()
 
 #function to write letter on top of screen
@@ -58,9 +70,14 @@ def drop_apple():
     wn.tracer(False)
     reset_apple(apple)
 
+def check_apple_a():
+    if(current_letter == "a"):
+        drop_apple()
+
 #-----function calls-----
-draw_apple(active_apple)
-wn.onkeypress(drop_apple, current_letter)
+draw_apple(apple, current_letter)
+wn.onkeypress(check_apple_a, "a")
+wn.onkeypress()
 
 #   a123_apple_letters.py
 #TODO Create a function that takes a turtle as its parameter and gives that turtle (apple)
