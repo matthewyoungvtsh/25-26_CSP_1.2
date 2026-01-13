@@ -74,10 +74,135 @@ def check_apple_a():
     if(current_letter == "a"):
         drop_apple()
 
+def check_apple_b():
+    if(current_letter == "b"):
+        drop_apple()
+
+def check_apple_c():
+    if(current_letter == "c"):
+        drop_apple()
+
+def check_apple_d():
+    if(current_letter == "d"):
+        drop_apple()
+
+def check_apple_e():
+    if(current_letter == "e"):
+        drop_apple()
+
+def check_apple_f():
+    if(current_letter == "f"):
+        drop_apple()
+
+def check_apple_g():
+    if(current_letter == "g"):
+        drop_apple()
+
+def check_apple_h():
+    if(current_letter == "h"):
+        drop_apple()
+
+def check_apple_i():
+    if(current_letter == "i"):
+        drop_apple()
+
+def check_apple_j():
+    if(current_letter == "j"):
+        drop_apple()
+
+def check_apple_k():
+    if(current_letter == "k"):
+        drop_apple()
+
+def check_apple_l():
+    if(current_letter == "l"):
+        drop_apple()
+
+def check_apple_m():
+    if(current_letter == "m"):
+        drop_apple()
+
+def check_apple_n():
+    if(current_letter == "n"):
+        drop_apple()
+
+def check_apple_o():
+    if(current_letter == "o"):
+        drop_apple()
+
+def check_apple_p():
+    if(current_letter == "p"):
+        drop_apple()
+
+def check_apple_q():
+    if(current_letter == "q"):
+        drop_apple()
+
+def check_apple_r():
+    if(current_letter == "r"):
+        drop_apple()
+
+def check_apple_s():
+    if(current_letter == "s"):
+        drop_apple()
+
+def check_apple_t():
+    if(current_letter == "t"):
+        drop_apple()
+
+def check_apple_u():
+    if(current_letter == "u"):
+        drop_apple()
+
+def check_apple_v():
+    if(current_letter == "v"):
+        drop_apple()
+
+def check_apple_w():
+    if(current_letter == "w"):
+        drop_apple()
+
+def check_apple_x():
+    if(current_letter == "x"):
+        drop_apple()
+
+def check_apple_y():
+    if(current_letter == "y"):
+        drop_apple()
+
+def check_apple_z():
+    if(current_letter == "z"):
+        drop_apple()
+
 #-----function calls-----
 draw_apple(apple, current_letter)
 wn.onkeypress(check_apple_a, "a")
-wn.onkeypress()
+wn.onkeypress(check_apple_b, "b")
+wn.onkeypress(check_apple_c, "c")
+wn.onkeypress(check_apple_d, "d")
+wn.onkeypress(check_apple_e, "e")
+wn.onkeypress(check_apple_f, "f")
+wn.onkeypress(check_apple_g, "g")
+wn.onkeypress(check_apple_h, "h")
+wn.onkeypress(check_apple_i, "i")
+wn.onkeypress(check_apple_j, "j")
+wn.onkeypress(check_apple_k, "k")
+wn.onkeypress(check_apple_l, "l")
+wn.onkeypress(check_apple_m, "m")
+wn.onkeypress(check_apple_n, "n")
+wn.onkeypress(check_apple_o, "o")
+wn.onkeypress(check_apple_p, "p")
+wn.onkeypress(check_apple_q, "q")
+wn.onkeypress(check_apple_r, "r")
+wn.onkeypress(check_apple_s, "s")
+wn.onkeypress(check_apple_t, "t")
+wn.onkeypress(check_apple_u, "u")
+wn.onkeypress(check_apple_v, "v")
+wn.onkeypress(check_apple_w, "w")
+wn.onkeypress(check_apple_x, "x")
+wn.onkeypress(check_apple_y, "y")
+wn.onkeypress(check_apple_z, "z")
+
 
 #   a123_apple_letters.py
 #TODO Create a function that takes a turtle as its parameter and gives that turtle (apple)
